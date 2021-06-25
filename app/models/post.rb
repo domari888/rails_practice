@@ -5,6 +5,6 @@ class Post < ApplicationRecord
   validates :content, presence: true
 
   def liked_by?(current_user)
-    likes.exists?(user_id: current_user.id)
+    likes.any? { |like| like.user_id == current_user.id }
   end
 end
