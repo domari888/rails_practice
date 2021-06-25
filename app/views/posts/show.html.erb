@@ -1,4 +1,5 @@
 <h1>投稿詳細</h1>
+<p>【ユーザーネーム】: <%= @post.user.user_name %></p>
 <p>【メールアドレス】<%= @post.user.email %></p>
 <p>【内容】<%= @post.content %></p>
 <p>【日時】<%= l @post.created_at %></p>
