@@ -5,9 +5,9 @@
 <p>【日時】<%= l @post.created_at %></p>
 <p>
   <% if @post.liked_by?(current_user) %>
-    ★
+    <%= render "like", post: :@post %>
   <% else %>
-    ☆
+    <%= render "dislike", post: :@post %>
   <% end %>
 </p>
 <p>
